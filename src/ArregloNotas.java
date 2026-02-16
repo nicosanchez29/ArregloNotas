@@ -13,7 +13,7 @@ public class ArregloNotas {
         double menor = encontrarNotaMenor(notas);
         ordenarNotas(notas);
         resumen(notas, promedio, mayor, menor);
-        notasPerdidas(notas);
+        notasGanadas(notas);
     }
 
     public static double ingresarNota(String mensaje) {
@@ -72,8 +72,8 @@ public class ArregloNotas {
         System.out.println("Nota menor: " + menor);
     }
 
-    public static void notasPerdidas(double[] notas) {
-        int contadorPerdidas = 0;
+    public static void notasGanadas(double[] notas) {
+        int contadorGanadas = 0;
         for (int i = 0; i < notas.length; i++) {
             if (notas[i] < 3.0) {
                 contadorPerdidas++;
